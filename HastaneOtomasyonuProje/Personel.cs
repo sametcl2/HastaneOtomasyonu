@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HastaneOtomasyonuProje
 {
@@ -61,6 +62,28 @@ namespace HastaneOtomasyonuProje
 			Form1 form1 = new Form1();
 			form1.Show();
 			this.Hide();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				SqlConnection sqlConnection = new SqlConnection("Data Source=DESKTOP-4B6TH1C;Integrated Security=True");
+				SqlCommand sqlCommand = new SqlCommand("SELECT * FROM kayit_elemanlari WHERE tc_no=" + textBox1.Text.ToString() +
+					"and ad=" + textBox1.Text.ToString() +
+					"and soyad=" + textBox3.Text.ToString() +
+					"and personel_no=" + maskedTextBox1.Text.ToString(), sqlConnection);
+				sqlConnection.Open();
+				SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+				if (sqlDataReader.HasRows == true)
+					MessageBox.Show("Helal lan");
+				else
+					MessageBox.Show("Tekrar dene");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
 		}
 	}
 }

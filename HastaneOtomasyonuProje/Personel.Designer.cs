@@ -58,7 +58,7 @@
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label3.Location = new System.Drawing.Point(68, 452);
+			this.label3.Location = new System.Drawing.Point(68, 388);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(375, 48);
 			this.label3.TabIndex = 26;
@@ -68,7 +68,7 @@
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label5.Location = new System.Drawing.Point(68, 343);
+			this.label5.Location = new System.Drawing.Point(68, 304);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(138, 48);
 			this.label5.TabIndex = 28;
@@ -78,7 +78,7 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label6.Location = new System.Drawing.Point(68, 238);
+			this.label6.Location = new System.Drawing.Point(68, 219);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(71, 48);
 			this.label6.TabIndex = 29;
@@ -96,7 +96,7 @@
 			// textBox2
 			// 
 			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.textBox2.Location = new System.Drawing.Point(614, 258);
+			this.textBox2.Location = new System.Drawing.Point(614, 239);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(234, 26);
 			this.textBox2.TabIndex = 35;
@@ -105,7 +105,7 @@
 			// textBox3
 			// 
 			this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.textBox3.Location = new System.Drawing.Point(614, 363);
+			this.textBox3.Location = new System.Drawing.Point(614, 324);
 			this.textBox3.Name = "textBox3";
 			this.textBox3.Size = new System.Drawing.Size(234, 26);
 			this.textBox3.TabIndex = 36;
@@ -114,7 +114,7 @@
 			// maskedTextBox1
 			// 
 			this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.maskedTextBox1.Location = new System.Drawing.Point(614, 472);
+			this.maskedTextBox1.Location = new System.Drawing.Point(614, 408);
 			this.maskedTextBox1.Mask = "00000";
 			this.maskedTextBox1.Name = "maskedTextBox1";
 			this.maskedTextBox1.Size = new System.Drawing.Size(234, 26);
@@ -136,6 +136,7 @@
 			this.button1.TabIndex = 39;
 			this.button1.Text = "Giriş";
 			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// panel1
 			// 
