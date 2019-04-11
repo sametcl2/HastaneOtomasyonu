@@ -68,12 +68,15 @@ namespace HastaneOtomasyonuProje
 		{
 			try
 			{
-				SqlConnection sqlConnection = new SqlConnection("Data Source=DESKTOP-4B6TH1C;Integrated Security=True");
-				SqlCommand sqlCommand = new SqlCommand("SELECT * FROM kayit_elemanlari WHERE tc_no=" + textBox1.Text.ToString() +
-					"and ad=" + textBox1.Text.ToString() +
-					"and soyad=" + textBox3.Text.ToString() +
-					"and personel_no=" + maskedTextBox1.Text.ToString(), sqlConnection);
+				SqlConnection sqlConnection = new SqlConnection("server=DESKTOP-4B6TH1C;database=kayit_elemanlari;" +
+					"Integrated Security=true");
+				SqlCommand sqlCommand = new SqlCommand("SELECT * FROM kayit_elemanlari WHERE tc_no=@tc_no " +
+					"and ad=@ad and soyad=@soyad and personel_no=@personel_no", sqlConnection);
 				sqlConnection.Open();
+				sqlCommand.Parameters.AddWithValue("@tc_no", textBox1.Text);
+				sqlCommand.Parameters.AddWithValue("@ad", textBox2.Text);
+				sqlCommand.Parameters.AddWithValue("@soyad", textBox3.Text);
+				sqlCommand.Parameters.AddWithValue("@personel_no", maskedTextBox1.Text);
 				SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 				if (sqlDataReader.HasRows == true)
 					MessageBox.Show("Helal lan");
