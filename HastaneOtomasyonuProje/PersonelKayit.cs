@@ -32,5 +32,12 @@ namespace HastaneOtomasyonuProje
 		{
 			label1.Text = ad + " " + soyad;
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			KayitEkleme kayit = new KayitEkleme(ad, soyad);
+			kayit.Show();
+			this.Hide();
+		}
 	}
 }

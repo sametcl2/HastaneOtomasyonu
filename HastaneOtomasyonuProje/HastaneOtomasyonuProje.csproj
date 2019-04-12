@@ -66,6 +66,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="KayitEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KayitEkleme.Designer.cs">
+      <DependentUpon>KayitEkleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KayitEkleme.resx">
+      <DependentUpon>KayitEkleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personel.resx">
       <DependentUpon>Personel.cs</DependentUpon>
