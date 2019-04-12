@@ -40,6 +40,8 @@
 			this.button1 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
@@ -160,11 +162,32 @@
 			this.pictureBox2.TabStop = false;
 			this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.label2.Location = new System.Drawing.Point(69, 478);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(94, 42);
+			this.label2.TabIndex = 41;
+			this.label2.Text = "Şifre";
+			// 
+			// textBox4
+			// 
+			this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.textBox4.Location = new System.Drawing.Point(614, 494);
+			this.textBox4.Name = "textBox4";
+			this.textBox4.Size = new System.Drawing.Size(234, 26);
+			this.textBox4.TabIndex = 42;
+			this.textBox4.UseSystemPasswordChar = true;
+			// 
 			// Personel
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1000, 768);
+			this.Controls.Add(this.textBox4);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.maskedTextBox1);
@@ -200,5 +223,7 @@
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.TextBox textBox4;
 	}
 }
