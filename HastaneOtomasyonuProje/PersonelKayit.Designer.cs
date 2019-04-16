@@ -66,7 +66,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label1.Location = new System.Drawing.Point(41, 672);
+			this.label1.Location = new System.Drawing.Point(36, 598);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(0, 31);
 			this.label1.TabIndex = 42;
@@ -116,6 +116,7 @@
 			this.button3.Text = "Parola Değiştir";
 			this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// label2
 			// 

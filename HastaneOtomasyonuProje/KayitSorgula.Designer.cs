@@ -70,6 +70,7 @@
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox2.TabIndex = 1;
 			this.pictureBox2.TabStop = false;
+			this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
 			// 
 			// label1
 			// 
@@ -114,9 +115,9 @@
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9});
-			this.listView1.Location = new System.Drawing.Point(55, 312);
+			this.listView1.Location = new System.Drawing.Point(37, 298);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(916, 187);
+			this.listView1.Size = new System.Drawing.Size(924, 187);
 			this.listView1.TabIndex = 66;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -138,32 +139,32 @@
 			// columnHeader4
 			// 
 			this.columnHeader4.Text = "Doğum Tarihi";
-			this.columnHeader4.Width = 105;
+			this.columnHeader4.Width = 115;
 			// 
 			// columnHeader5
 			// 
 			this.columnHeader5.Text = "Cinsiyet";
-			this.columnHeader5.Width = 72;
+			this.columnHeader5.Width = 79;
 			// 
 			// columnHeader6
 			// 
 			this.columnHeader6.Text = "Doktor";
-			this.columnHeader6.Width = 84;
+			this.columnHeader6.Width = 169;
 			// 
 			// columnHeader7
 			// 
 			this.columnHeader7.Text = "Klinik";
-			this.columnHeader7.Width = 73;
+			this.columnHeader7.Width = 94;
 			// 
 			// columnHeader8
 			// 
 			this.columnHeader8.Text = " Randevu Tarihi";
-			this.columnHeader8.Width = 126;
+			this.columnHeader8.Width = 137;
 			// 
 			// columnHeader9
 			// 
 			this.columnHeader9.Text = "Randevu Saati";
-			this.columnHeader9.Width = 119;
+			this.columnHeader9.Width = 136;
 			// 
 			// KayitSorgula
 			// 

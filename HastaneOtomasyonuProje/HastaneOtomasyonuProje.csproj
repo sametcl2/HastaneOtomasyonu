@@ -90,6 +90,12 @@
     <Compile Include="PersonelKayit.Designer.cs">
       <DependentUpon>PersonelKayit.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelSifre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelSifre.Designer.cs">
+      <DependentUpon>PersonelSifre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControl1.cs">
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelKayit.resx">
       <DependentUpon>PersonelKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelSifre.resx">
+      <DependentUpon>PersonelSifre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

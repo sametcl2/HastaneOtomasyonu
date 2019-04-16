@@ -13,8 +13,12 @@ namespace HastaneOtomasyonuProje
 {
 	public partial class KayitSorgula : Form
 	{
-		public KayitSorgula()
+		string ad;
+		string soyad;
+		public KayitSorgula(string ad, string soyad)
 		{
+			this.ad = ad;
+			this.soyad = soyad;
 			InitializeComponent();
 		}
 
@@ -71,6 +75,13 @@ namespace HastaneOtomasyonuProje
 			{
 				MessageBox.Show(ex.Message);
 			}
+		}
+
+		private void pictureBox2_Click(object sender, EventArgs e)
+		{
+			PersonelKayit personelKayit = new PersonelKayit(ad, soyad);
+			personelKayit.Show();
+			this.Close();
 		}
 	}
 }

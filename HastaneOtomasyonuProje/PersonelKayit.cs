@@ -42,9 +42,16 @@ namespace HastaneOtomasyonuProje
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			KayitSorgula kayitSorgula = new KayitSorgula();
+			KayitSorgula kayitSorgula = new KayitSorgula(ad, soyad);
 			kayitSorgula.Show();
 			this.Hide();
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			PersonelSifre personelSifre = new PersonelSifre();
+			personelSifre.Show();
+			this.Close();
 		}
 	}
 }
