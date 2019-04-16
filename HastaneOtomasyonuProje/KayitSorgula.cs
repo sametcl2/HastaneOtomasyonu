@@ -63,7 +63,10 @@ namespace HastaneOtomasyonuProje
 					listViewItem.SubItems.Add(sqlDataReader["klinik"].ToString());
 					listViewItem.SubItems.Add(sqlDataReader["randevu_tarih"].ToString());
 					listViewItem.SubItems.Add(sqlDataReader["randevu_saat"].ToString());
+					listView1.Items.Add(listViewItem);
 				}
+				sqlConnection.Close();
+				textBox1.Clear();
 			}catch(Exception ex)
 			{
 				MessageBox.Show(ex.Message);

@@ -75,7 +75,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label1.Location = new System.Drawing.Point(103, 168);
+			this.label1.Location = new System.Drawing.Point(49, 168);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(283, 36);
 			this.label1.TabIndex = 44;
@@ -84,7 +84,7 @@
 			// textBox1
 			// 
 			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.textBox1.Location = new System.Drawing.Point(457, 174);
+			this.textBox1.Location = new System.Drawing.Point(448, 174);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(200, 30);
 			this.textBox1.TabIndex = 50;
@@ -94,7 +94,7 @@
 			// 
 			this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(783, 546);
+			this.pictureBox1.Location = new System.Drawing.Point(812, 529);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(188, 153);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,9 +114,9 @@
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9});
-			this.listView1.Location = new System.Drawing.Point(109, 322);
+			this.listView1.Location = new System.Drawing.Point(55, 312);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(829, 151);
+			this.listView1.Size = new System.Drawing.Size(916, 187);
 			this.listView1.TabIndex = 66;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -177,6 +177,7 @@
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "KayitSorgula";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "KayitSorgula";
 			this.Load += new System.EventHandler(this.KayitSorgula_Load);
 			this.panel1.ResumeLayout(false);
