@@ -39,5 +39,12 @@ namespace HastaneOtomasyonuProje
 			kayit.Show();
 			this.Hide();
 		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			KayitSorgula kayitSorgula = new KayitSorgula();
+			kayitSorgula.Show();
+			this.Hide();
+		}
 	}
 }
