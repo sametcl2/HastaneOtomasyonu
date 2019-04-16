@@ -78,7 +78,7 @@
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-			this.button1.Location = new System.Drawing.Point(91, 295);
+			this.button1.Location = new System.Drawing.Point(74, 327);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(217, 94);
 			this.button1.TabIndex = 43;
@@ -94,7 +94,7 @@
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-			this.button2.Location = new System.Drawing.Point(663, 298);
+			this.button2.Location = new System.Drawing.Point(406, 327);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(211, 94);
 			this.button2.TabIndex = 44;
@@ -108,7 +108,7 @@
 			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-			this.button3.Location = new System.Drawing.Point(377, 453);
+			this.button3.Location = new System.Drawing.Point(714, 327);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(211, 101);
 			this.button3.TabIndex = 45;
@@ -130,7 +130,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1000, 764);
+			this.ClientSize = new System.Drawing.Size(1000, 660);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);

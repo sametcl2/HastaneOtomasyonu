@@ -52,6 +52,8 @@
 			this.Ad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Soyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Bölüm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.comboBox3 = new System.Windows.Forms.ComboBox();
+			this.label9 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -182,7 +184,7 @@
             "Kulak Burun Boğaz\t",
             "Nöroloji",
             "Ortopedi"});
-			this.comboBox2.Location = new System.Drawing.Point(278, 390);
+			this.comboBox2.Location = new System.Drawing.Point(262, 369);
 			this.comboBox2.Name = "comboBox2";
 			this.comboBox2.Size = new System.Drawing.Size(220, 28);
 			this.comboBox2.TabIndex = 56;
@@ -192,7 +194,7 @@
 			// 
 			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
 			this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.panel2.Location = new System.Drawing.Point(0, 343);
+			this.panel2.Location = new System.Drawing.Point(0, 326);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(1000, 10);
 			this.panel2.TabIndex = 57;
@@ -201,7 +203,7 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label6.Location = new System.Drawing.Point(81, 389);
+			this.label6.Location = new System.Drawing.Point(81, 368);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(59, 25);
 			this.label6.TabIndex = 58;
@@ -211,7 +213,7 @@
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label7.Location = new System.Drawing.Point(81, 467);
+			this.label7.Location = new System.Drawing.Point(81, 488);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(69, 25);
 			this.label7.TabIndex = 59;
@@ -221,7 +223,7 @@
 			// 
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label8.Location = new System.Drawing.Point(554, 393);
+			this.label8.Location = new System.Drawing.Point(554, 372);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(144, 25);
 			this.label8.TabIndex = 61;
@@ -230,7 +232,7 @@
 			// dateTimePicker2
 			// 
 			this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.dateTimePicker2.Location = new System.Drawing.Point(741, 392);
+			this.dateTimePicker2.Location = new System.Drawing.Point(741, 371);
 			this.dateTimePicker2.Name = "dateTimePicker2";
 			this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
 			this.dateTimePicker2.TabIndex = 62;
@@ -239,7 +241,7 @@
 			// 
 			this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(39, 585);
+			this.pictureBox1.Location = new System.Drawing.Point(26, 587);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(188, 153);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -263,9 +265,9 @@
             this.Bölüm});
 			this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.listView1.FullRowSelect = true;
-			this.listView1.Location = new System.Drawing.Point(278, 467);
+			this.listView1.Location = new System.Drawing.Point(262, 488);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(663, 252);
+			this.listView1.Size = new System.Drawing.Size(679, 252);
 			this.listView1.TabIndex = 66;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -285,11 +287,52 @@
 			this.Bölüm.Text = "Bölüm";
 			this.Bölüm.Width = 191;
 			// 
+			// comboBox3
+			// 
+			this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.comboBox3.FormattingEnabled = true;
+			this.comboBox3.Items.AddRange(new object[] {
+            "08.00",
+            "08.30",
+            "09.00",
+            "09.30",
+            "10.00",
+            "10.30",
+            "11.00",
+            "11.30",
+            "12.00",
+            "12.30",
+            "13.00",
+            "13.30",
+            "14.00",
+            "14.30",
+            "15.00",
+            "15.30",
+            "16.00",
+            "16.30",
+            "17.00"});
+			this.comboBox3.Location = new System.Drawing.Point(741, 418);
+			this.comboBox3.Name = "comboBox3";
+			this.comboBox3.Size = new System.Drawing.Size(200, 28);
+			this.comboBox3.TabIndex = 67;
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.label9.Location = new System.Drawing.Point(554, 421);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(140, 25);
+			this.label9.TabIndex = 68;
+			this.label9.Text = "Randevu Saati";
+			// 
 			// KayitEkleme
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(973, 765);
+			this.ClientSize = new System.Drawing.Size(973, 773);
+			this.Controls.Add(this.label9);
+			this.Controls.Add(this.comboBox3);
 			this.Controls.Add(this.listView1);
 			this.Controls.Add(this.dateTimePicker1);
 			this.Controls.Add(this.pictureBox1);
@@ -347,5 +390,7 @@
 		private System.Windows.Forms.ColumnHeader Ad;
 		private System.Windows.Forms.ColumnHeader Soyad;
 		private System.Windows.Forms.ColumnHeader Bölüm;
+		private System.Windows.Forms.ComboBox comboBox3;
+		private System.Windows.Forms.Label label9;
 	}
 }

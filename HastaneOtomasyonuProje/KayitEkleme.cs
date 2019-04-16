@@ -67,8 +67,8 @@ namespace HastaneOtomasyonuProje
 				ListViewItem selectedItem = listView1.SelectedItems[0];
 				sqlConnectionKayit.Open();
 				SqlCommand sqlCommand = new SqlCommand("INSERT INTO randevu_kayit (tc_no, ad, soyad, dogum_tarihi, cinsiyet, " +
-				"klinik, doktor, randevu_tarih) VALUES (@tc_no, @ad, @soyad, @dogum_tarihi, @cinsiyet, " +
-				"@klinik, @doktor, @randevu_tarihi)", sqlConnectionKayit);
+				"klinik, doktor, randevu_tarih, dogum_tarih, randevu_saat) VALUES (@tc_no, @ad, @soyad, @dogum_tarihi, @cinsiyet, " +
+				"@klinik, @doktor, @randevu_tarihi, @dogum_tarih, @randevu_saat)", sqlConnectionKayit);
 				sqlCommand.Parameters.AddWithValue("@tc_no", textBox1.Text);
 				sqlCommand.Parameters.AddWithValue("@ad", textBox2.Text);
 				sqlCommand.Parameters.AddWithValue("@soyad", textBox3.Text);
@@ -77,9 +77,15 @@ namespace HastaneOtomasyonuProje
 				sqlCommand.Parameters.AddWithValue("@klinik", comboBox2.SelectedItem.ToString());
 				sqlCommand.Parameters.AddWithValue("@doktor", selectedItem.SubItems[0].Text + selectedItem.SubItems[1].Text);
 				sqlCommand.Parameters.AddWithValue("@randevu_tarihi", dateTimePicker2.Value.ToString("dd-MM-yyyy"));
+				sqlCommand.Parameters.AddWithValue("@dogum_tarih", dateTimePicker1.Value.ToString("dd-MM-yyyy"));
+				sqlCommand.Parameters.AddWithValue("@randevu_saat", comboBox3.SelectedItem.ToString());
 				sqlCommand.ExecuteNonQuery();
 				sqlConnectionKayit.Close(); 
 				MessageBox.Show("Kayıt Başarılı");
+				textBox1.Clear();
+				textBox2.Clear();
+				textBox3.Clear();
+			
 			}
 			catch(Exception ex)
 			{
