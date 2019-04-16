@@ -15,10 +15,12 @@ namespace HastaneOtomasyonuProje
 	{
 		string ad;
 		string soyad;
-		public KayitSorgula(string ad, string soyad)
+		string tc_no;
+		public KayitSorgula(string ad, string soyad, string tc_no)
 		{
 			this.ad = ad;
 			this.soyad = soyad;
+			this.tc_no = tc_no;
 			InitializeComponent();
 		}
 
@@ -79,7 +81,7 @@ namespace HastaneOtomasyonuProje
 
 		private void pictureBox2_Click(object sender, EventArgs e)
 		{
-			PersonelKayit personelKayit = new PersonelKayit(ad, soyad);
+			PersonelKayit personelKayit = new PersonelKayit(ad, soyad, tc_no);
 			personelKayit.Show();
 			this.Close();
 		}

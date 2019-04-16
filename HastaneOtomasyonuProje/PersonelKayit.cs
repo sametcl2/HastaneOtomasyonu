@@ -15,10 +15,12 @@ namespace HastaneOtomasyonuProje
 	{
 		string ad;
 		string soyad;
-		public PersonelKayit(string ad, string soyad)
+		string tc_no;
+		public PersonelKayit(string ad, string soyad, string tc_no)
 		{
 			this.ad = ad;
 			this.soyad = soyad;
+			this.tc_no = tc_no;
 			InitializeComponent();
 		}
 
@@ -35,21 +37,21 @@ namespace HastaneOtomasyonuProje
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			KayitEkleme kayit = new KayitEkleme(ad, soyad);
+			KayitEkleme kayit = new KayitEkleme(ad, soyad, tc_no);
 			kayit.Show();
 			this.Hide();
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			KayitSorgula kayitSorgula = new KayitSorgula(ad, soyad);
+			KayitSorgula kayitSorgula = new KayitSorgula(ad, soyad, tc_no);
 			kayitSorgula.Show();
 			this.Hide();
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			PersonelSifre personelSifre = new PersonelSifre();
+			PersonelSifre personelSifre = new PersonelSifre(tc_no, ad, soyad);
 			personelSifre.Show();
 			this.Close();
 		}

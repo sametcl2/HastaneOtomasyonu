@@ -82,7 +82,7 @@ namespace HastaneOtomasyonuProje
 				if (sqlDataReader.HasRows == true)
 				{
 					MessageBox.Show("Giriş başarılı");
-					PersonelKayit personelKayit = new PersonelKayit(textBox2.Text, textBox3.Text);
+					PersonelKayit personelKayit = new PersonelKayit(textBox2.Text, textBox3.Text, textBox1.Text);
 					personelKayit.Show();
 					this.Hide();
 				}
