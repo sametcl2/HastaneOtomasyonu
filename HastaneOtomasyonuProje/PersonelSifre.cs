@@ -60,6 +60,8 @@ namespace HastaneOtomasyonuProje
 				sqlCommand.ExecuteNonQuery();
 				sqlConnection.Close();
 				MessageBox.Show("Şifre değiştirme başarılı");
+				textBox1.Clear();
+				textBox2.Clear();
 				PersonelKayit personelKayit = new PersonelKayit(ad, soyad, tc_no);
 				personelKayit.Show();
 				this.Hide();
@@ -68,6 +70,13 @@ namespace HastaneOtomasyonuProje
 			{
 				MessageBox.Show(ex.Message);
 			}
+		}
+
+		private void pictureBox2_Click(object sender, EventArgs e)
+		{
+			PersonelKayit personelKayit = new PersonelKayit(ad, soyad, tc_no);
+			personelKayit.Show();
+			this.Hide();
 		}
 	}
 }

@@ -52,6 +52,7 @@ namespace HastaneOtomasyonuProje
 		{
 			try
 			{
+				listView1.Clear();
 				string tc_no = textBox1.Text;
 				sqlConnection.Open();
 				SqlCommand sqlCommand = new SqlCommand("SELECT * FROM randevu_kayit Where tc_no=@tc_no", sqlConnection);
