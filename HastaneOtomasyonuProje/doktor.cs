@@ -75,10 +75,12 @@ namespace HastaneOtomasyonuProje
 			
 				if (reader.HasRows == true)
 				{
-					//string bolum = reader["bolum"].ToString();
+					string bolum = "";
+					while (reader.Read())
+						bolum = reader["bolum"].ToString();
 					MessageBox.Show("Giriş başarılı");
-					DoktorAnaEkran doktorAnaEkran = new DoktorAnaEkran(textBox2.Text, textBox3.Text, textBox1.Text);
-					doktorAnaEkran.Show();
+					DoktorAnaEkran doktor = new DoktorAnaEkran(textBox2.Text, textBox3.Text, bolum);
+					doktor.Show();
 					this.Hide();
 				}
 				else

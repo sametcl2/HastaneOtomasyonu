@@ -16,11 +16,12 @@ namespace HastaneOtomasyonuProje
 
 		public DoktorAnaEkran(string ad, string soyad, string bolum)
 		{
+			InitializeComponent();
 			this.ad = ad;
 			this.soyad = soyad;
 			this.bolum = bolum;
 			label1.Text = ad + " " + soyad + ", " + bolum;
-			InitializeComponent();
+			
 		}
 
 		private void DoktorAnaEkran_Load(object sender, EventArgs e)
