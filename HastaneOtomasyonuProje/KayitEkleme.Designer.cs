@@ -66,7 +66,7 @@
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(973, 71);
+			this.panel1.Size = new System.Drawing.Size(1016, 71);
 			this.panel1.TabIndex = 42;
 			// 
 			// pictureBox2
@@ -330,7 +330,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(973, 773);
+			this.ClientSize = new System.Drawing.Size(1016, 773);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.comboBox3);
 			this.Controls.Add(this.listView1);

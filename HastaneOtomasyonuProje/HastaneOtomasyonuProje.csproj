@@ -66,6 +66,18 @@
     <Compile Include="DoktorAnaEkran.Designer.cs">
       <DependentUpon>DoktorAnaEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoktorMuayene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorMuayene.Designer.cs">
+      <DependentUpon>DoktorMuayene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoktorRandevu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorRandevu.Designer.cs">
+      <DependentUpon>DoktorRandevu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +130,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoktorAnaEkran.resx">
       <DependentUpon>DoktorAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorMuayene.resx">
+      <DependentUpon>DoktorMuayene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorRandevu.resx">
+      <DependentUpon>DoktorRandevu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
