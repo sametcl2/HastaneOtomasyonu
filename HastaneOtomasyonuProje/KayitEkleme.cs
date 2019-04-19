@@ -99,20 +99,10 @@ namespace HastaneOtomasyonuProje
 					sqlCommand.Parameters.AddWithValue("@randevu_saat", comboBox3.SelectedItem.ToString());
 					sqlCommand.ExecuteNonQuery();
 					sqlConnectionKayit.Close();
-					sqlConnectionDoktor.Open();
-					SqlCommand sqlCommandD = new SqlCommand("SELECT * FROM doktorlar WHERE ad=@ad and soyad=@soyad", sqlConnectionDoktor);
-					sqlCommandD.Parameters.AddWithValue("ad", selectedItem.SubItems[0].Text);
-					sqlCommandD.Parameters.AddWithValue("soyad", selectedItem.SubItems[1].Text);
-					SqlDataReader reader = sqlCommandD.ExecuteReader();
-					string tut = reader["gunlukHastaSayisi"].ToString();
-					int sayac = int.Parse(tut);
-					sayac++;
-					reader.Close();
-					sqlConnectionDoktor.Close();
 					MessageBox.Show("Kayıt Başarılı");
-					textBox1.Clear();
-					textBox2.Clear();
-					textBox3.Clear();
+					textBox1.Text = " ";
+					textBox2.Text = " ";
+					textBox3.Text = " ";
 				}
 			}
 			catch(Exception ex)
