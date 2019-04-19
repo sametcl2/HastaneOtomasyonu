@@ -196,7 +196,7 @@
 			this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.panel2.Location = new System.Drawing.Point(0, 326);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(1000, 10);
+			this.panel2.Size = new System.Drawing.Size(1016, 10);
 			this.panel2.TabIndex = 57;
 			// 
 			// label6
