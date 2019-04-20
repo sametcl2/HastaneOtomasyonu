@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HastaneOtomasyonuProje
 {
@@ -16,7 +17,8 @@ namespace HastaneOtomasyonuProje
 		{
 			InitializeComponent();
 		}
-
+		SqlConnection sqlConnection = new SqlConnection("server=DESKTOP-4B6TH1C;database=depo_elemanlari;" +
+					"Integrated Security=true");
 		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
 
@@ -55,6 +57,29 @@ namespace HastaneOtomasyonuProje
 			Form1 form1 = new Form1();
 			form1.Show();
 			this.Close();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			SqlCommand sqlCommand = new SqlCommand("SELECT * FROM depo_elemanlari WHERE tc_no=@tc_no and ad=@ad and soyad=@soyad and " +
+				"personel_no=@personel_no and sifre=@sifre", sqlConnection);
+			sqlConnection.Open();
+			sqlCommand.Parameters.AddWithValue("@tc_no", textBox1.Text);
+			sqlCommand.Parameters.AddWithValue("@ad", textBox2.Text);
+			sqlCommand.Parameters.AddWithValue("@soyad", textBox3.Text);
+			sqlCommand.Parameters.AddWithValue("@personel_no", maskedTextBox1.Text);
+			sqlCommand.Parameters.AddWithValue("@sifre", textBox4.Text);
+			SqlDataReader reader = sqlCommand.ExecuteReader();
+			while (reader.HasRows)
+			{
+				MessageBox.Show("Giriş Başarılı");
+				DepoAnaEkran depoAnaEkran = new DepoAnaEkran(textBox2.Text, textBox3.Text);
+				depoAnaEkran.Show();
+				this.Hide();
+				break;
+
+			}
+			sqlConnection.Close();
 		}
 	}
 }

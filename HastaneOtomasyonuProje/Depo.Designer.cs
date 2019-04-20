@@ -76,12 +76,13 @@
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.button1.Location = new System.Drawing.Point(361, 584);
+			this.button1.Location = new System.Drawing.Point(398, 592);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(272, 98);
+			this.button1.Size = new System.Drawing.Size(222, 87);
 			this.button1.TabIndex = 50;
 			this.button1.Text = "Giriş";
 			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// maskedTextBox1
 			// 
