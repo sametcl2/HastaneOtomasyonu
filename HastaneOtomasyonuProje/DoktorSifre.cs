@@ -11,42 +11,46 @@ using System.Data.SqlClient;
 
 namespace HastaneOtomasyonuProje
 {
-	public partial class PersonelSifre : Form
+	public partial class DoktorSifre : Form
 	{
-		string tc_no;
 		string ad;
 		string soyad;
-		public PersonelSifre(string tc_no, string ad, string soyad)
+		string bolum;
+		public DoktorSifre(string ad, string soyad, string bolum)
 		{
 			InitializeComponent();
-			this.tc_no = tc_no;
 			this.ad = ad;
 			this.soyad = soyad;
+			this.bolum = bolum;
+		}
+		SqlConnection sqlConnection = new SqlConnection("server=DESKTOP-4B6TH1C;database=doktorlar;" +
+					"Integrated Security=true");
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+
 		}
 
-		SqlConnection sqlConnection = new SqlConnection("server=DESKTOP-4B6TH1C;database=kayit_elemanlari;" +
-					"Integrated Security=true");
 		private void button1_Click(object sender, EventArgs e)
 		{
 			bool gecerli = true;
-			if (textBox1.Text.Length > 15 || textBox1.Text.Length < 5)
+			if (textBox2.Text.Length > 15 || textBox2.Text.Length < 5)
 			{
 				MessageBox.Show("Şİfre uzunluğu 5 ile 15 karakter arası olmalıdır.");
-				textBox1.Focus();
-				gecerli = false;
-			}
-
-			if (textBox2.Text != textBox1.Text)
-			{
-				MessageBox.Show("Şifreler uyuşmuyor.");
 				textBox2.Focus();
 				gecerli = false;
 			}
 
-			if (textBox1.Text=="")
+			if (textBox2.Text != textBox3.Text)
+			{
+				MessageBox.Show("Şifreler uyuşmuyor.");
+				textBox3.Focus();
+				gecerli = false;
+			}
+
+			if (textBox2.Text == "")
 			{
 				MessageBox.Show("Geçerli bir şifre giriniz.");
-				textBox1.Focus();
+				textBox2.Focus();
 				gecerli = false;
 			}
 			if (!checkBox1.Checked)
@@ -54,30 +58,30 @@ namespace HastaneOtomasyonuProje
 				MessageBox.Show("Şifre değiştirmeyi onaylayınız.");
 				gecerli = false;
 			}
-			if (textBox3.Text == "")
+			if (textBox1.Text == "")
 			{
 				MessageBox.Show("Mevcut Şifrenizi giriniz.");
 				textBox3.Focus();
 				gecerli = false;
 			}
 
-			else if(gecerli==true)
+			else if (gecerli == true)
 			{
 				try
 				{
 					sqlConnection.Open();
-					SqlCommand sqlCommand = new SqlCommand("UPDATE kayit_elemanlari SET sifre=@sifre WHERE tc_no=@tc_no",
-						sqlConnection);
-					sqlCommand.Parameters.AddWithValue("@tc_no", tc_no);
-					sqlCommand.Parameters.AddWithValue("@sifre", textBox1.Text);
+					SqlCommand sqlCommand = new SqlCommand("UPDATE doktorlar SET sifre=@sifre WHERE ad=@ad and soyad=@soyad", sqlConnection);
+					sqlCommand.Parameters.AddWithValue("@ad", ad);
+					sqlCommand.Parameters.AddWithValue("@soyad", soyad);
+					sqlCommand.Parameters.AddWithValue("@sifre", textBox2.Text);
 					sqlCommand.ExecuteNonQuery();
 					sqlConnection.Close();
 					MessageBox.Show("Şifre değiştirme başarılı");
 					textBox1.Text = " ";
 					textBox2.Text = " ";
 					textBox3.Text = " ";
-					PersonelKayit personelKayit = new PersonelKayit(ad, soyad, tc_no);
-					personelKayit.Show();
+					DoktorAnaEkran doktorAnaEkran = new DoktorAnaEkran(ad, soyad, bolum);
+					doktorAnaEkran.Show();
 					this.Hide();
 				}
 				catch (Exception ex)
@@ -87,22 +91,15 @@ namespace HastaneOtomasyonuProje
 			}
 		}
 
-		private void pictureBox2_Click(object sender, EventArgs e)
+		private void textBox1_Leave(object sender, EventArgs e)
 		{
-			PersonelKayit personelKayit = new PersonelKayit(ad, soyad, tc_no);
-			personelKayit.Show();
-			this.Hide();
-		}
-
-		private void textBox3_Leave(object sender, EventArgs e)
-		{
-			string sifre = textBox3.Text;
-			string yeni = "";
 			sqlConnection.Open();
-			SqlCommand sqlCommandd = new SqlCommand("SELECT * FROM kayit_elemanlari WHERE ad=@ad and soyad=@soyad", sqlConnection);
-			sqlCommandd.Parameters.AddWithValue("@ad", ad);
-			sqlCommandd.Parameters.AddWithValue("@soyad", soyad);
-			SqlDataReader reader = sqlCommandd.ExecuteReader();
+			string sifre = textBox1.Text;
+			string yeni = "";
+			SqlCommand sqlCommand = new SqlCommand("SELECT * FROM doktorlar WHERE ad=@ad and soyad=@soyad", sqlConnection);
+			sqlCommand.Parameters.AddWithValue("@ad", ad);
+			sqlCommand.Parameters.AddWithValue("@soyad", soyad);
+			SqlDataReader reader = sqlCommand.ExecuteReader();
 			while (reader.Read())
 			{
 				yeni = reader["sifre"].ToString();
@@ -111,8 +108,8 @@ namespace HastaneOtomasyonuProje
 			}
 			if(sifre.Trim() != yeni.Trim())
 			{
-				MessageBox.Show("Mevcut Şifrenizi Giriniz.");
-				textBox3.Focus();
+				MessageBox.Show("Mevcut Şifrenizi Giriniz");
+				textBox1.Focus();
 			}
 		}
 	}

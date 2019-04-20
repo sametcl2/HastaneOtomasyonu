@@ -44,6 +44,7 @@
 			this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,6 +113,7 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6,
+            this.columnHeader10,
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9});
@@ -148,8 +150,8 @@
 			// 
 			// columnHeader6
 			// 
-			this.columnHeader6.Text = "Doktor";
-			this.columnHeader6.Width = 169;
+			this.columnHeader6.Text = "DoktorAd";
+			this.columnHeader6.Width = 89;
 			// 
 			// columnHeader7
 			// 
@@ -165,6 +167,11 @@
 			// 
 			this.columnHeader9.Text = "Randevu Saati";
 			this.columnHeader9.Width = 136;
+			// 
+			// columnHeader10
+			// 
+			this.columnHeader10.Text = "DoktorSoyad";
+			this.columnHeader10.Width = 105;
 			// 
 			// KayitSorgula
 			// 
@@ -206,5 +213,6 @@
 		private System.Windows.Forms.ColumnHeader columnHeader7;
 		private System.Windows.Forms.ColumnHeader columnHeader8;
 		private System.Windows.Forms.ColumnHeader columnHeader9;
+		private System.Windows.Forms.ColumnHeader columnHeader10;
 	}
 }

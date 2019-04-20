@@ -52,11 +52,10 @@ namespace HastaneOtomasyonuProje
 		{
 			try
 			{
-				listView1.Clear();
-				string tc_no = textBox1.Text;
+				//listView1.Clear();
 				sqlConnection.Open();
-				SqlCommand sqlCommand = new SqlCommand("SELECT * FROM randevu_kayit Where tc_no=@tc_no", sqlConnection);
-				sqlCommand.Parameters.AddWithValue("@tc_no", tc_no);
+				SqlCommand sqlCommand = new SqlCommand("SELECT * FROM randevu_kayit WHERE tc_no=@tc_no", sqlConnection);
+				sqlCommand.Parameters.AddWithValue("@tc_no", textBox1.Text);
 				SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 				while (sqlDataReader.Read())
 				{
@@ -66,7 +65,8 @@ namespace HastaneOtomasyonuProje
 					listViewItem.SubItems.Add(sqlDataReader["soyad"].ToString());
 					listViewItem.SubItems.Add(sqlDataReader["dogum_tarihi"].ToString());
 					listViewItem.SubItems.Add(sqlDataReader["cinsiyet"].ToString());
-					listViewItem.SubItems.Add(sqlDataReader["doktor"].ToString());
+					listViewItem.SubItems.Add(sqlDataReader["doktorAd"].ToString());
+					listViewItem.SubItems.Add(sqlDataReader["doktorSoyad"].ToString());
 					listViewItem.SubItems.Add(sqlDataReader["klinik"].ToString());
 					listViewItem.SubItems.Add(sqlDataReader["randevu_tarih"].ToString());
 					listViewItem.SubItems.Add(sqlDataReader["randevu_saat"].ToString());
@@ -74,11 +74,12 @@ namespace HastaneOtomasyonuProje
 				}
 				sqlConnection.Close();
 				textBox1.Clear();
-			}catch(Exception ex)
+			}
+			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
 			}
-		}
+		}	
 
 		private void pictureBox2_Click(object sender, EventArgs e)
 		{

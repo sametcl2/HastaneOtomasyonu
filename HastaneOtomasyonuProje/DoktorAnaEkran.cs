@@ -26,7 +26,9 @@ namespace HastaneOtomasyonuProje
 
 		private void button4_Click(object sender, EventArgs e)
 		{
-
+			DoktorSifre doktorSifre = new DoktorSifre(ad, soyad, bolum);
+			doktorSifre.Show();
+			this.Hide();
 		}
 
 		private void pictureBox2_Click(object sender, EventArgs e)
