@@ -65,7 +65,7 @@
 			// 
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-			this.button1.Location = new System.Drawing.Point(649, 293);
+			this.button1.Location = new System.Drawing.Point(656, 293);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(219, 95);
 			this.button1.TabIndex = 43;
@@ -81,7 +81,7 @@
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(219, 95);
 			this.button2.TabIndex = 44;
-			this.button2.Text = "Stok Durumu";
+			this.button2.Text = "Stok Takibi";
 			this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.button2.UseVisualStyleBackColor = true;
 			// 
@@ -89,7 +89,7 @@
 			// 
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-			this.button3.Location = new System.Drawing.Point(76, 293);
+			this.button3.Location = new System.Drawing.Point(67, 293);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(220, 95);
 			this.button3.TabIndex = 45;

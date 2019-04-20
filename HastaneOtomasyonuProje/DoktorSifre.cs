@@ -112,5 +112,12 @@ namespace HastaneOtomasyonuProje
 				textBox1.Focus();
 			}
 		}
+
+		private void pictureBox2_Click(object sender, EventArgs e)
+		{
+			DoktorAnaEkran doktorAnaEkran = new DoktorAnaEkran(ad, soyad, bolum);
+			doktorAnaEkran.Show();
+			this.Hide();
+		}
 	}
 }
