@@ -14,11 +14,13 @@ namespace HastaneOtomasyonuProje
 	{
 		string ad;
 		string soyad;
-		public DepoAnaEkran(string ad, string soyad)
+		string tc_no;
+		public DepoAnaEkran(string ad, string soyad, string tc_no)
 		{
 			InitializeComponent();
 			this.ad = ad;
 			this.soyad = soyad;
+			this.tc_no = tc_no;
 		}
 
 		private void pictureBox1_Click(object sender, EventArgs e)
@@ -31,6 +33,13 @@ namespace HastaneOtomasyonuProje
 		private void DepoAnaEkran_Load(object sender, EventArgs e)
 		{
 			label1.Text = ad + " " + soyad;
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			DepoSifre depoSifre = new DepoSifre(ad, soyad, tc_no);
+			depoSifre.Show();
+			this.Hide();
 		}
 	}
 }

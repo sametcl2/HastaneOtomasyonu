@@ -79,7 +79,7 @@
 			// 
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-			this.button2.Location = new System.Drawing.Point(737, 407);
+			this.button2.Location = new System.Drawing.Point(744, 407);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(243, 108);
 			this.button2.TabIndex = 44;
@@ -116,7 +116,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label1.Location = new System.Drawing.Point(30, 599);
+			this.label1.Location = new System.Drawing.Point(92, 588);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(0, 29);
 			this.label1.TabIndex = 47;

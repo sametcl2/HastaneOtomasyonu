@@ -73,7 +73,7 @@ namespace HastaneOtomasyonuProje
 			while (reader.HasRows)
 			{
 				MessageBox.Show("Giriş Başarılı");
-				DepoAnaEkran depoAnaEkran = new DepoAnaEkran(textBox2.Text, textBox3.Text);
+				DepoAnaEkran depoAnaEkran = new DepoAnaEkran(textBox2.Text, textBox3.Text, textBox1.Text);
 				depoAnaEkran.Show();
 				this.Hide();
 				break;

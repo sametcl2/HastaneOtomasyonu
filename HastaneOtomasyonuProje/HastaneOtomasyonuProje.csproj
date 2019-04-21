@@ -60,6 +60,12 @@
     <Compile Include="DepoAnaEkran.Designer.cs">
       <DependentUpon>DepoAnaEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="DepoSifre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepoSifre.Designer.cs">
+      <DependentUpon>DepoSifre.cs</DependentUpon>
+    </Compile>
     <Compile Include="doktor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DepoAnaEkran.resx">
       <DependentUpon>DepoAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepoSifre.resx">
+      <DependentUpon>DepoSifre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="doktor.resx">
       <DependentUpon>doktor.cs</DependentUpon>
