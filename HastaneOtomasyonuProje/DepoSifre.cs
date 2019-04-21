@@ -119,5 +119,12 @@ namespace HastaneOtomasyonuProje
 				MessageBox.Show(ex.Message);
 			}
 		}
+
+		private void pictureBox2_Click_1(object sender, EventArgs e)
+		{
+			DepoAnaEkran depoAnaEkran = new DepoAnaEkran(ad ,soyad, tc_no);
+			depoAnaEkran.Show();
+			this.Hide();
+		}
 	}
 }

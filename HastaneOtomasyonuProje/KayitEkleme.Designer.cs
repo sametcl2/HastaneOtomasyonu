@@ -177,7 +177,7 @@
 			this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.comboBox2.FormattingEnabled = true;
 			this.comboBox2.Items.AddRange(new object[] {
-            "Beyin Cerrahisi",
+            "Beyin ve Sinir Cerrahisi",
             "Çocuk Cerrahisi",
             "Göğüs Hastalıkları",
             "Kalp ve Damar Cerrahisi",

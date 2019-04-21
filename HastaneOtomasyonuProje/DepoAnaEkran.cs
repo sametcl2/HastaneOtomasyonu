@@ -41,5 +41,12 @@ namespace HastaneOtomasyonuProje
 			depoSifre.Show();
 			this.Hide();
 		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			StokTakibi stokTakibi = new StokTakibi(ad, soyad,tc_no);
+			stokTakibi.Show();
+			this.Hide();
+		}
 	}
 }
