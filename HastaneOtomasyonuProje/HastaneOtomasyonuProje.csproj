@@ -66,6 +66,12 @@
     <Compile Include="DepoSifre.Designer.cs">
       <DependentUpon>DepoSifre.cs</DependentUpon>
     </Compile>
+    <Compile Include="DepoUrunGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepoUrunGiris.Designer.cs">
+      <DependentUpon>DepoUrunGiris.cs</DependentUpon>
+    </Compile>
     <Compile Include="doktor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DepoSifre.resx">
       <DependentUpon>DepoSifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepoUrunGiris.resx">
+      <DependentUpon>DepoUrunGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="doktor.resx">
       <DependentUpon>doktor.cs</DependentUpon>

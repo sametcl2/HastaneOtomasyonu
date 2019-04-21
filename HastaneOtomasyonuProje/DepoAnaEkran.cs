@@ -48,5 +48,12 @@ namespace HastaneOtomasyonuProje
 			stokTakibi.Show();
 			this.Hide();
 		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			DepoUrunGiris depoUrunGiris = new DepoUrunGiris(ad, soyad, tc_no);
+			depoUrunGiris.Show();
+			this.Hide();
+		}
 	}
 }
