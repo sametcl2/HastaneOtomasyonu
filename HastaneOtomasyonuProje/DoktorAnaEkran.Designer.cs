@@ -64,6 +64,7 @@
 			// 
 			// button1
 			// 
+			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
 			this.button1.Location = new System.Drawing.Point(97, 407);
@@ -77,6 +78,7 @@
 			// 
 			// button2
 			// 
+			this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
 			this.button2.Location = new System.Drawing.Point(744, 407);
@@ -86,9 +88,11 @@
 			this.button2.Text = "İlaç Stokları";
 			this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// button3
 			// 
+			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
 			this.button3.Location = new System.Drawing.Point(414, 232);
@@ -101,6 +105,7 @@
 			// 
 			// button4
 			// 
+			this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
 			this.button4.Location = new System.Drawing.Point(414, 407);

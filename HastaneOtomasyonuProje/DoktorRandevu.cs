@@ -33,9 +33,10 @@ namespace HastaneOtomasyonuProje
 			{
 				sqlConnection.Open();
 				SqlCommand sqlCommand = new SqlCommand("SELECT * FROM randevu_kayit WHERE doktorAd=@doktorAd and" +
-					" doktorSoyad=@doktorSoyad", sqlConnection);
+					" doktorSoyad=@doktorSoyad and randevu_tarih=@randevu_tarih", sqlConnection);
 				sqlCommand.Parameters.AddWithValue("@doktorAd", ad);
 				sqlCommand.Parameters.AddWithValue("@doktorSoyad", soyad);
+				sqlCommand.Parameters.AddWithValue("@randevu_tarih", DateTime.Now.ToString("dd-MM-yyyy"));
 				SqlDataReader reader = sqlCommand.ExecuteReader();
 				while (reader.Read())
 				{
@@ -44,7 +45,6 @@ namespace HastaneOtomasyonuProje
 					listViewItem.SubItems.Add(reader["ad"].ToString());
 					listViewItem.SubItems.Add(reader["soyad"].ToString());
 					listViewItem.SubItems.Add(reader["cinsiyet"].ToString());
-					listViewItem.SubItems.Add(reader["randevu_tarih"].ToString());
 					listViewItem.SubItems.Add(reader["randevu_saat"].ToString());
 					listView1.Items.Add(listViewItem);
 				}

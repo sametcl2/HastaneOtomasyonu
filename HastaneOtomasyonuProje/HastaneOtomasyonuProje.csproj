@@ -102,6 +102,12 @@
     <Compile Include="DoktorSifre.Designer.cs">
       <DependentUpon>DoktorSifre.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoktorStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorStok.Designer.cs">
+      <DependentUpon>DoktorStok.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoktorSifre.resx">
       <DependentUpon>DoktorSifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorStok.resx">
+      <DependentUpon>DoktorStok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

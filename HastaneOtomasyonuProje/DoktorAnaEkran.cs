@@ -38,6 +38,13 @@ namespace HastaneOtomasyonuProje
 			this.Hide();
 		}
 
+		private void button2_Click(object sender, EventArgs e)
+		{
+			DoktorStok doktorStok = new DoktorStok(ad, soyad, bolum);
+			doktorStok.Show();
+			this.Hide();
+		}
+
 		private void button1_Click(object sender, EventArgs e)
 		{
 			DoktorRandevu doktorRandevu = new DoktorRandevu(ad, soyad, bolum);

@@ -30,14 +30,13 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoktorRandevu));
 			this.listView1 = new System.Windows.Forms.ListView();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.KimlikNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Ad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Soyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.KimlikNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.RandevuSaati = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Cinsiyet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.RandevuTarih = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.RandevuSaati = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
@@ -49,23 +48,47 @@
             this.Ad,
             this.Soyad,
             this.Cinsiyet,
-            this.RandevuTarih,
             this.RandevuSaati});
 			this.listView1.Location = new System.Drawing.Point(87, 201);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(824, 215);
+			this.listView1.Size = new System.Drawing.Size(711, 263);
 			this.listView1.TabIndex = 1;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
 			// 
+			// KimlikNo
+			// 
+			this.KimlikNo.Text = "KimlikNo";
+			this.KimlikNo.Width = 108;
+			// 
+			// Ad
+			// 
+			this.Ad.Text = "Ad";
+			this.Ad.Width = 92;
+			// 
+			// Soyad
+			// 
+			this.Soyad.Text = "Soyad";
+			this.Soyad.Width = 89;
+			// 
+			// Cinsiyet
+			// 
+			this.Cinsiyet.Text = "Cinsiyet";
+			this.Cinsiyet.Width = 96;
+			// 
+			// RandevuSaati
+			// 
+			this.RandevuSaati.Text = "RandevuSaati";
+			this.RandevuSaati.Width = 140;
+			// 
 			// panel1
 			// 
-			this.panel1.BackColor = System.Drawing.Color.DarkCyan;
+			this.panel1.BackColor = System.Drawing.Color.SeaGreen;
 			this.panel1.Controls.Add(this.pictureBox2);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1000, 71);
+			this.panel1.Size = new System.Drawing.Size(894, 71);
 			this.panel1.TabIndex = 42;
 			// 
 			// pictureBox2
@@ -80,41 +103,11 @@
 			this.pictureBox2.TabStop = false;
 			this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
 			// 
-			// Ad
-			// 
-			this.Ad.Text = "Ad";
-			this.Ad.Width = 92;
-			// 
-			// Soyad
-			// 
-			this.Soyad.Text = "Soyad";
-			this.Soyad.Width = 89;
-			// 
-			// KimlikNo
-			// 
-			this.KimlikNo.Text = "KimlikNo";
-			this.KimlikNo.Width = 108;
-			// 
-			// RandevuSaati
-			// 
-			this.RandevuSaati.Text = "RandevuSaati";
-			this.RandevuSaati.Width = 140;
-			// 
-			// Cinsiyet
-			// 
-			this.Cinsiyet.Text = "Cinsiyet";
-			this.Cinsiyet.Width = 96;
-			// 
-			// RandevuTarih
-			// 
-			this.RandevuTarih.Text = "RandevuTarih";
-			this.RandevuTarih.Width = 130;
-			// 
 			// DoktorRandevu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1000, 572);
+			this.ClientSize = new System.Drawing.Size(894, 572);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.listView1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -138,6 +131,5 @@
 		private System.Windows.Forms.ColumnHeader Soyad;
 		private System.Windows.Forms.ColumnHeader Cinsiyet;
 		private System.Windows.Forms.ColumnHeader RandevuSaati;
-		private System.Windows.Forms.ColumnHeader RandevuTarih;
 	}
 }
