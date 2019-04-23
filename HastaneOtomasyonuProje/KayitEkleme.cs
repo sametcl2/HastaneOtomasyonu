@@ -123,7 +123,7 @@ namespace HastaneOtomasyonuProje
 				ListViewItem ekle = new ListViewItem();
 				ekle.Text = reader["ad"].ToString();
 				ekle.SubItems.Add(reader["soyad"].ToString());
-				ekle.SubItems.Add(reader["bolum"].ToString());
+				ekle.SubItems.Add(reader["bolum"].ToString().Trim());
 				listView1.Items.Add(ekle);
 			}
 			sqlConnectionDoktor.Close();

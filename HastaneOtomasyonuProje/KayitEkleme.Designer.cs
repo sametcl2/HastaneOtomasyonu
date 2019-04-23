@@ -115,7 +115,7 @@
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label4.Location = new System.Drawing.Point(554, 134);
+			this.label4.Location = new System.Drawing.Point(566, 132);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(129, 25);
 			this.label4.TabIndex = 46;
@@ -125,7 +125,7 @@
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label5.Location = new System.Drawing.Point(554, 197);
+			this.label5.Location = new System.Drawing.Point(566, 196);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(82, 25);
 			this.label5.TabIndex = 47;
@@ -166,7 +166,7 @@
 			this.comboBox1.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-			this.comboBox1.Location = new System.Drawing.Point(741, 194);
+			this.comboBox1.Location = new System.Drawing.Point(751, 194);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(200, 28);
 			this.comboBox1.TabIndex = 55;
@@ -181,12 +181,12 @@
             "Çocuk Cerrahisi",
             "Göğüs Hastalıkları",
             "Kalp ve Damar Cerrahisi",
-            "Kulak Burun Boğaz\t",
-            "Nöroloji",
+            "Kulak Burun Boğaz             ",
+            "Psikoloji                     ",
             "Ortopedi"});
 			this.comboBox2.Location = new System.Drawing.Point(262, 369);
 			this.comboBox2.Name = "comboBox2";
-			this.comboBox2.Size = new System.Drawing.Size(220, 28);
+			this.comboBox2.Size = new System.Drawing.Size(237, 28);
 			this.comboBox2.TabIndex = 56;
 			this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
 			// 
@@ -223,7 +223,7 @@
 			// 
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label8.Location = new System.Drawing.Point(554, 372);
+			this.label8.Location = new System.Drawing.Point(566, 372);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(144, 25);
 			this.label8.TabIndex = 61;
@@ -232,7 +232,7 @@
 			// dateTimePicker2
 			// 
 			this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.dateTimePicker2.Location = new System.Drawing.Point(741, 371);
+			this.dateTimePicker2.Location = new System.Drawing.Point(751, 369);
 			this.dateTimePicker2.Name = "dateTimePicker2";
 			this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
 			this.dateTimePicker2.TabIndex = 62;
@@ -252,7 +252,7 @@
 			// dateTimePicker1
 			// 
 			this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.dateTimePicker1.Location = new System.Drawing.Point(741, 131);
+			this.dateTimePicker1.Location = new System.Drawing.Point(751, 131);
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
 			this.dateTimePicker1.TabIndex = 65;
@@ -267,7 +267,7 @@
 			this.listView1.FullRowSelect = true;
 			this.listView1.Location = new System.Drawing.Point(262, 488);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(679, 252);
+			this.listView1.Size = new System.Drawing.Size(689, 252);
 			this.listView1.TabIndex = 66;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -311,7 +311,7 @@
             "16.00",
             "16.30",
             "17.00"});
-			this.comboBox3.Location = new System.Drawing.Point(741, 418);
+			this.comboBox3.Location = new System.Drawing.Point(751, 418);
 			this.comboBox3.Name = "comboBox3";
 			this.comboBox3.Size = new System.Drawing.Size(200, 28);
 			this.comboBox3.TabIndex = 67;
@@ -320,7 +320,7 @@
 			// 
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label9.Location = new System.Drawing.Point(554, 421);
+			this.label9.Location = new System.Drawing.Point(566, 421);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(140, 25);
 			this.label9.TabIndex = 68;

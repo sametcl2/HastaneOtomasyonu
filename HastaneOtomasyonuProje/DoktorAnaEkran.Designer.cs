@@ -71,7 +71,7 @@
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(229, 108);
 			this.button1.TabIndex = 43;
-			this.button1.Text = "Randevuları gör";
+			this.button1.Text = "Bugünkü randevuları gör";
 			this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -102,6 +102,7 @@
 			this.button3.Text = "Muayene Ekranı";
 			this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// button4
 			// 
