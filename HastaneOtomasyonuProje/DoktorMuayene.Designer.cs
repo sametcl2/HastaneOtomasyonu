@@ -39,12 +39,12 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.listView1 = new System.Windows.Forms.ListView();
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.listView2 = new System.Windows.Forms.ListView();
 			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
+			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.groupBox2.SuspendLayout();
@@ -151,25 +151,18 @@
 			// 
 			// pictureBox1
 			// 
+			this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(815, 536);
+			this.pictureBox1.Location = new System.Drawing.Point(815, 546);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(171, 150);
+			this.pictureBox1.Size = new System.Drawing.Size(171, 130);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 53;
 			this.pictureBox1.TabStop = false;
 			// 
-			// listView1
-			// 
-			this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.listView1.Location = new System.Drawing.Point(284, 477);
-			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(491, 187);
-			this.listView1.TabIndex = 52;
-			this.listView1.UseCompatibleStateImageBehavior = false;
-			// 
 			// pictureBox3
 			// 
+			this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
 			this.pictureBox3.Location = new System.Drawing.Point(80, 546);
 			this.pictureBox3.Name = "pictureBox3";
@@ -213,18 +206,27 @@
 			this.checkBox1.UseVisualStyleBackColor = true;
 			this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
+			// richTextBox1
+			// 
+			this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.richTextBox1.Location = new System.Drawing.Point(284, 499);
+			this.richTextBox1.Name = "richTextBox1";
+			this.richTextBox1.Size = new System.Drawing.Size(495, 177);
+			this.richTextBox1.TabIndex = 60;
+			this.richTextBox1.Text = "";
+			// 
 			// DoktorMuayene
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1065, 755);
+			this.Controls.Add(this.richTextBox1);
 			this.Controls.Add(this.checkBox1);
 			this.Controls.Add(this.listView2);
 			this.Controls.Add(this.pictureBox3);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.listView1);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "DoktorMuayene";
@@ -254,11 +256,11 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.ListView listView1;
 		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.ListView listView2;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.ColumnHeader columnHeader2;
 		private System.Windows.Forms.CheckBox checkBox1;
+		private System.Windows.Forms.RichTextBox richTextBox1;
 	}
 }
