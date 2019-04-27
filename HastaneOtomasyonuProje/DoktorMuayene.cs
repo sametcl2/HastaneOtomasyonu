@@ -77,10 +77,6 @@ namespace HastaneOtomasyonuProje
 				label5.Text = sqlDataReader["dogum_tarihi"].ToString();
 				label6.Text = sqlDataReader["cinsiyet"].ToString();
 			}
-			else
-			{
-				
-			}
 			sqlConnection.Close();
 		}
 
@@ -107,6 +103,27 @@ namespace HastaneOtomasyonuProje
 				listView2.Visible = true;
 			else
 				listView2.Visible = false;
+		}
+
+		private void pictureBox3_Click(object sender, EventArgs e)
+		{
+			printDialog1.ShowDialog();
+			printDocument1.Print();
+		}
+
+		private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+		{
+			string ilac = "";
+			if (checkBox1.Checked)
+				ilac = listView2.SelectedItems[0].Text;
+			Font yazi_tipi = new Font("Tahoma", 12, FontStyle.Bold);
+			e.Graphics.DrawString(label2.Text, yazi_tipi, Brushes.Black, 100, 50);
+			e.Graphics.DrawString(label3.Text, yazi_tipi, Brushes.Black, 100, 100);
+			e.Graphics.DrawString(label4.Text, yazi_tipi, Brushes.Black, 100, 150);
+			e.Graphics.DrawString(label5.Text, yazi_tipi, Brushes.Black, 100, 200);
+			e.Graphics.DrawString(label6.Text, yazi_tipi, Brushes.Black, 100, 250);
+			e.Graphics.DrawString(ilac, yazi_tipi, Brushes.Black, 100, 350);
+			e.Graphics.DrawString(richTextBox1.Text,yazi_tipi, Brushes.Black, 100, 400);
 		}
 	}
 }

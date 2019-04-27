@@ -45,6 +45,8 @@
 			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.groupBox2.SuspendLayout();
@@ -170,6 +172,7 @@
 			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox3.TabIndex = 56;
 			this.pictureBox3.TabStop = false;
+			this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
 			// 
 			// listView2
 			// 
@@ -214,6 +217,14 @@
 			this.richTextBox1.Size = new System.Drawing.Size(495, 177);
 			this.richTextBox1.TabIndex = 60;
 			this.richTextBox1.Text = "";
+			// 
+			// printDocument1
+			// 
+			this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+			// 
+			// printDialog1
+			// 
+			this.printDialog1.UseEXDialog = true;
 			// 
 			// DoktorMuayene
 			// 
@@ -262,5 +273,7 @@
 		private System.Windows.Forms.ColumnHeader columnHeader2;
 		private System.Windows.Forms.CheckBox checkBox1;
 		private System.Windows.Forms.RichTextBox richTextBox1;
+		private System.Drawing.Printing.PrintDocument printDocument1;
+		private System.Windows.Forms.PrintDialog printDialog1;
 	}
 }
