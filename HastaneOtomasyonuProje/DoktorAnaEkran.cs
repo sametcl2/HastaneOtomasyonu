@@ -12,7 +12,7 @@ namespace HastaneOtomasyonuProje
 {
 	public partial class DoktorAnaEkran : Form
 	{
-		string ad, soyad, bolum;
+		string ad, soyad, bolum, tarih;
 
 		public DoktorAnaEkran(string ad, string soyad, string bolum)
 		{
@@ -47,7 +47,7 @@ namespace HastaneOtomasyonuProje
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			DoktorMuayene doktorMuayene = new DoktorMuayene(ad, soyad, bolum);
+			DoktorMuayene doktorMuayene = new DoktorMuayene(ad, soyad, bolum, tarih);
 			doktorMuayene.Show();
 			this.Hide();
 		}
@@ -61,7 +61,7 @@ namespace HastaneOtomasyonuProje
 
 		private void DoktorAnaEkran_Load(object sender, EventArgs e)
 		{
-
+			tarih = DateTime.Now.ToString("dd-MM-yyyy");
 		}
 	}
 }
