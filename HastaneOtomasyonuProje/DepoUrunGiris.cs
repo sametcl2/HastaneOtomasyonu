@@ -77,7 +77,7 @@ namespace HastaneOtomasyonuProje
 			sqlConnection.Close();
 			MessageBox.Show("Ürün Girişi Başarılı");
 			textBox1.Text = "";
-			listView1.Items.Clear();
+			//listView1.Items.Clear();
 		}
 
 		private void pictureBox1_Click(object sender, EventArgs e)

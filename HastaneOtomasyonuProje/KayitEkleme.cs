@@ -63,6 +63,35 @@ namespace HastaneOtomasyonuProje
 
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
+			Ekle();
+		}
+
+		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			listView1.Items.Clear();
+			sqlConnectionDoktor.Open();
+			SqlCommand sqlCommand = new SqlCommand("SELECT * FROM doktorlar WHERE bolum=@bolum", sqlConnectionDoktor);
+			sqlCommand.Parameters.AddWithValue("@bolum", comboBox2.Text);
+			SqlDataReader reader = sqlCommand.ExecuteReader();
+			while (reader.Read())
+			{
+				ListViewItem ekle = new ListViewItem();
+				ekle.Text = reader["ad"].ToString();
+				ekle.SubItems.Add(reader["soyad"].ToString());
+				ekle.SubItems.Add(reader["bolum"].ToString().Trim());
+				listView1.Items.Add(ekle);
+			}
+			sqlConnectionDoktor.Close();
+		}
+
+		private void pictureBox2_Click(object sender, EventArgs e)
+		{
+			PersonelKayit personel = new PersonelKayit(ad, soyad, tc_no);
+			personel.Show();
+			this.Close();
+		}
+		private void Ekle()
+		{
 			try
 			{
 				ListViewItem selectedItem = listView1.SelectedItems[0];
@@ -105,35 +134,10 @@ namespace HastaneOtomasyonuProje
 					textBox3.Text = " ";
 				}
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
 			}
-		}
-
-		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			listView1.Items.Clear();
-			sqlConnectionDoktor.Open();
-			SqlCommand sqlCommand = new SqlCommand("SELECT * FROM doktorlar WHERE bolum=@bolum", sqlConnectionDoktor);
-			sqlCommand.Parameters.AddWithValue("@bolum", comboBox2.Text);
-			SqlDataReader reader = sqlCommand.ExecuteReader();
-			while (reader.Read())
-			{
-				ListViewItem ekle = new ListViewItem();
-				ekle.Text = reader["ad"].ToString();
-				ekle.SubItems.Add(reader["soyad"].ToString());
-				ekle.SubItems.Add(reader["bolum"].ToString().Trim());
-				listView1.Items.Add(ekle);
-			}
-			sqlConnectionDoktor.Close();
-		}
-
-		private void pictureBox2_Click(object sender, EventArgs e)
-		{
-			PersonelKayit personel = new PersonelKayit(ad, soyad, tc_no);
-			personel.Show();
-			this.Close();
 		}
 	}
 }

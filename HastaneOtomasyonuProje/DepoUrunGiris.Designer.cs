@@ -101,6 +101,7 @@
 			// 
 			// button1
 			// 
+			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
 			this.button1.Location = new System.Drawing.Point(788, 365);

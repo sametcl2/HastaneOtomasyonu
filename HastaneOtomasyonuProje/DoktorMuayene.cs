@@ -38,16 +38,6 @@ namespace HastaneOtomasyonuProje
 			this.Hide();
 		}
 
-		private void richTextBox1_TextChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
-		}
-
 		private void groupBox2_Enter(object sender, EventArgs e)
 		{
 
@@ -61,23 +51,7 @@ namespace HastaneOtomasyonuProje
 		private void DoktorMuayene_Load(object sender, EventArgs e)
 		{
 			listView2.Visible = false;
-			sqlConnection.Open();
-			SqlCommand sqlCommand = new SqlCommand("SELECT tc_no, ad, soyad, dogum_tarihi, cinsiyet, randevu_saat" +
-				" FROM randevu_kayit WHERE doktorAd=@doktorAd and doktorSoyad=@doktorSoyad and randevu_tarih=@randevu_tarih" +
-				" ORDER BY randevu_saat", sqlConnection);
-			sqlCommand.Parameters.AddWithValue("@doktorAd", ad);
-			sqlCommand.Parameters.AddWithValue("@doktorSoyad", soyad);
-			sqlCommand.Parameters.AddWithValue("@randevu_tarih", tarih);
-			SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-			if(sqlDataReader.Read())
-			{
-				label2.Text = sqlDataReader["tc_no"].ToString();
-				label3.Text = sqlDataReader["ad"].ToString();
-				label4.Text = sqlDataReader["soyad"].ToString();
-				label5.Text = sqlDataReader["dogum_tarihi"].ToString();
-				label6.Text = sqlDataReader["cinsiyet"].ToString();
-			}
-			sqlConnection.Close();
+			Goster();
 		}
 
 		private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -86,18 +60,7 @@ namespace HastaneOtomasyonuProje
 			{
 				listView2.Visible = true;
 				dolu = true;
-				sqlConnectionIlac.Open();
-				SqlCommand sqlCommand = new SqlCommand("SELECT * FROM ilaclar WHERE klinik=@bolum", sqlConnectionIlac);
-				sqlCommand.Parameters.AddWithValue("@bolum", bolum);
-				SqlDataReader reader = sqlCommand.ExecuteReader();
-				while (reader.Read())
-				{
-					ListViewItem item = new ListViewItem();
-					item.Text = reader["ilac_ad"].ToString();
-					item.SubItems.Add(reader["miktar"].ToString());
-					listView2.Items.Add(item);
-				}
-				sqlConnectionIlac.Close();
+				Ilaclar();
 			}
 			else if (checkBox1.Checked)
 				listView2.Visible = true;
@@ -128,26 +91,76 @@ namespace HastaneOtomasyonuProje
 
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
+			Kaydet();
+			richTextBox1.Text = "";
+		}
+
+		private void Goster()
+		{
 			sqlConnection.Open();
-			SqlCommand sqlCommandd = new SqlCommand("DELETE FROM randevu_kayit WHERE tc_no=@tc_no and klinik=@klinik",sqlConnection);
+			SqlCommand sqlCommand = new SqlCommand("SELECT tc_no, ad, soyad, dogum_tarihi, cinsiyet, randevu_saat" +
+				" FROM randevu_kayit WHERE doktorAd=@doktorAd and doktorSoyad=@doktorSoyad and randevu_tarih=@randevu_tarih" +
+				" ORDER BY randevu_saat", sqlConnection);
+			sqlCommand.Parameters.AddWithValue("@doktorAd", ad);
+			sqlCommand.Parameters.AddWithValue("@doktorSoyad", soyad);
+			sqlCommand.Parameters.AddWithValue("@randevu_tarih", tarih);
+			SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+			if (sqlDataReader.Read())
+			{
+				label2.Text = sqlDataReader["tc_no"].ToString();
+				label3.Text = sqlDataReader["ad"].ToString();
+				label4.Text = sqlDataReader["soyad"].ToString();
+				label5.Text = sqlDataReader["dogum_tarihi"].ToString();
+				label6.Text = sqlDataReader["cinsiyet"].ToString();
+			}
+			sqlConnection.Close();
+		}
+
+		private void Kaydet()
+		{
+			sqlConnection.Open();
+			SqlCommand sqlCommandd = new SqlCommand("DELETE FROM randevu_kayit WHERE tc_no=@tc_no and klinik=@klinik", sqlConnection);
 			sqlCommandd.Parameters.AddWithValue("@tc_no", label2.Text);
 			sqlCommandd.Parameters.AddWithValue("@klinik", bolum);
 			sqlCommandd.ExecuteNonQuery();
 			if (checkBox1.Checked)
 			{
-				ListViewItem listViewItem = listView2.SelectedItems[0];
-				sqlConnectionIlac.Open();
-				string ilac = listViewItem.SubItems[0].Text;
-				int miktari = int.Parse(listViewItem.SubItems[1].Text) - 1;
-				string miktar = miktari.ToString();
-				SqlCommand sqlCommand = new SqlCommand("UPDATE ilaclar SET miktar=@miktar WHERE ilac_ad=@ilac_ad", sqlConnectionIlac);
-				sqlCommand.Parameters.AddWithValue("@miktar", miktar);
-				sqlCommand.Parameters.AddWithValue("@ilac_ad", ilac);
-				sqlCommand.ExecuteNonQuery();
-				sqlConnectionIlac.Close();
+				IlacUpdate();
+				Ilaclar();
 			}
 			MessageBox.Show("işlem başarılı");
 			sqlConnection.Close();
+			Goster();
+		}
+
+		private void Ilaclar()
+		{
+			sqlConnectionIlac.Open();
+			SqlCommand sqlCommand = new SqlCommand("SELECT * FROM ilaclar WHERE klinik=@bolum", sqlConnectionIlac);
+			sqlCommand.Parameters.AddWithValue("@bolum", bolum);
+			SqlDataReader reader = sqlCommand.ExecuteReader();
+			while (reader.Read())
+			{
+				ListViewItem item = new ListViewItem();
+				item.Text = reader["ilac_ad"].ToString();
+				item.SubItems.Add(reader["miktar"].ToString());
+				listView2.Items.Add(item);
+			}
+			sqlConnectionIlac.Close();
+		}
+
+		private void IlacUpdate()
+		{
+			ListViewItem listViewItem = listView2.SelectedItems[0];
+			sqlConnectionIlac.Open();
+			string ilac = listViewItem.SubItems[0].Text;
+			int miktari = int.Parse(listViewItem.SubItems[1].Text) - 1;
+			string miktar = miktari.ToString();
+			SqlCommand sqlCommand = new SqlCommand("UPDATE ilaclar SET miktar=@miktar WHERE ilac_ad=@ilac_ad", sqlConnectionIlac);
+			sqlCommand.Parameters.AddWithValue("@miktar", miktar);
+			sqlCommand.Parameters.AddWithValue("@ilac_ad", ilac);
+			sqlCommand.ExecuteNonQuery();
+			sqlConnectionIlac.Close();
 		}
 	}
 }
