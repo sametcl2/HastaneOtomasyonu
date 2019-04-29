@@ -161,6 +161,7 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 53;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// pictureBox3
 			// 
@@ -180,6 +181,7 @@
             this.columnHeader1,
             this.columnHeader2});
 			this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.listView2.FullRowSelect = true;
 			this.listView2.Location = new System.Drawing.Point(485, 181);
 			this.listView2.Name = "listView2";
 			this.listView2.Size = new System.Drawing.Size(523, 236);

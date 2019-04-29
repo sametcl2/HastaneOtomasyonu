@@ -97,7 +97,7 @@ namespace HastaneOtomasyonuProje
 					item.SubItems.Add(reader["miktar"].ToString());
 					listView2.Items.Add(item);
 				}
-				sqlConnection.Close();
+				sqlConnectionIlac.Close();
 			}
 			else if (checkBox1.Checked)
 				listView2.Visible = true;
@@ -124,6 +124,30 @@ namespace HastaneOtomasyonuProje
 			e.Graphics.DrawString(label6.Text, yazi_tipi, Brushes.Black, 100, 250);
 			e.Graphics.DrawString(ilac, yazi_tipi, Brushes.Black, 100, 350);
 			e.Graphics.DrawString(richTextBox1.Text,yazi_tipi, Brushes.Black, 100, 400);
+		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			sqlConnection.Open();
+			SqlCommand sqlCommandd = new SqlCommand("DELETE randevu_kayit WHERE tc_no=@tc_no and klinik=@klinik",sqlConnection);
+			sqlCommandd.Parameters.AddWithValue("@tc_no", label1.Text);
+			sqlCommandd.Parameters.AddWithValue("@klinik", bolum);
+			sqlCommandd.ExecuteNonQuery();
+			if (checkBox1.Checked)
+			{
+				ListViewItem listViewItem = listView2.SelectedItems[0];
+				sqlConnectionIlac.Open();
+				string ilac = listViewItem.SubItems[0].Text;
+				int miktari = int.Parse(listViewItem.SubItems[1].Text) - 1;
+				string miktar = miktari.ToString();
+				SqlCommand sqlCommand = new SqlCommand("UPDATE ilaclar SET miktar=@miktar WHERE ilac_ad=@ilac_ad", sqlConnectionIlac);
+				sqlCommand.Parameters.AddWithValue("@miktar", miktar);
+				sqlCommand.Parameters.AddWithValue("@ilac_ad", ilac);
+				sqlCommand.ExecuteNonQuery();
+				sqlConnectionIlac.Close();
+			}
+			MessageBox.Show("işlem başarılı");
+			sqlConnection.Close();
 		}
 	}
 }
