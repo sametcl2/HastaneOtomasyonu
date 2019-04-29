@@ -129,8 +129,8 @@ namespace HastaneOtomasyonuProje
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
 			sqlConnection.Open();
-			SqlCommand sqlCommandd = new SqlCommand("DELETE randevu_kayit WHERE tc_no=@tc_no and klinik=@klinik",sqlConnection);
-			sqlCommandd.Parameters.AddWithValue("@tc_no", label1.Text);
+			SqlCommand sqlCommandd = new SqlCommand("DELETE FROM randevu_kayit WHERE tc_no=@tc_no and klinik=@klinik",sqlConnection);
+			sqlCommandd.Parameters.AddWithValue("@tc_no", label2.Text);
 			sqlCommandd.Parameters.AddWithValue("@klinik", bolum);
 			sqlCommandd.ExecuteNonQuery();
 			if (checkBox1.Checked)
