@@ -33,7 +33,7 @@ namespace HastaneOtomasyonuProje
 			{
 				sqlConnection.Open();
 				SqlCommand sqlCommand = new SqlCommand("SELECT * FROM randevu_kayit WHERE doktorAd=@doktorAd and" +
-					" doktorSoyad=@doktorSoyad and randevu_tarih=@randevu_tarih", sqlConnection);
+					" doktorSoyad=@doktorSoyad and randevu_tarih=@randevu_tarih ORDER BY randevu_saat", sqlConnection);
 				sqlCommand.Parameters.AddWithValue("@doktorAd", ad);
 				sqlCommand.Parameters.AddWithValue("@doktorSoyad", soyad);
 				sqlCommand.Parameters.AddWithValue("@randevu_tarih", DateTime.Now.ToString("dd-MM-yyyy"));
