@@ -34,7 +34,7 @@ namespace HastaneOtomasyonuProje
 				e.Handled = true;
 			else
 			{
-				if (textBox1.TextLength > 11 && char.IsControl(e.KeyChar) == false)
+				if (textBox1.TextLength > 10 && char.IsControl(e.KeyChar) == false)
 					e.Handled = true;
 			}
 		}
@@ -63,7 +63,20 @@ namespace HastaneOtomasyonuProje
 
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
-			Ekle();
+			if (textBox1.Text == "" || textBox1.Text.Length < 11)
+				MessageBox.Show("Geçerli bir T.C Kimlik no giriniz.");
+			else if (textBox2.Text == "" || textBox3.Text == "")
+				MessageBox.Show("Boş alan bırakmayınız.");
+			else if (comboBox1.Text == "")
+				MessageBox.Show("Cinsiyet belirtiniz.");
+			else if (comboBox2.Text == "")
+				MessageBox.Show("Bölüm ve doktor seçiniz");
+			else if (listView1.SelectedItems.Count==0)
+				MessageBox.Show("Doktor seçiniz.");
+			else if (comboBox3.Text == "")
+				MessageBox.Show("Randevu saati seçiniz.");
+			else
+				Ekle();
 		}
 
 		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

@@ -29,6 +29,8 @@ namespace HastaneOtomasyonuProje
 
 		private void DoktorRandevu_Load(object sender, EventArgs e)
 		{
+
+			label1.Text = DateTime.Now.ToString("dd-MM-yyyy") + " tarihli randevular.";
 			try
 			{
 				sqlConnection.Open();

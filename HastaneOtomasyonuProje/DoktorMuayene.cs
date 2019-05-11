@@ -92,6 +92,8 @@ namespace HastaneOtomasyonuProje
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
 			Kaydet();
+			IlacUpdate();
+			Ilaclar();
 			richTextBox1.Text = "";
 		}
 
@@ -125,7 +127,6 @@ namespace HastaneOtomasyonuProje
 			sqlCommandd.ExecuteNonQuery();
 			if (checkBox1.Checked)
 			{
-				IlacUpdate();
 				Ilaclar();
 			}
 			MessageBox.Show("işlem başarılı");

@@ -46,7 +46,7 @@
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(953, 74);
+			this.panel1.Size = new System.Drawing.Size(982, 74);
 			this.panel1.TabIndex = 42;
 			// 
 			// pictureBox1
@@ -66,7 +66,7 @@
 			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-			this.button1.Location = new System.Drawing.Point(656, 293);
+			this.button1.Location = new System.Drawing.Point(684, 278);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(219, 95);
 			this.button1.TabIndex = 43;
@@ -80,7 +80,7 @@
 			this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-			this.button2.Location = new System.Drawing.Point(362, 293);
+			this.button2.Location = new System.Drawing.Point(379, 278);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(219, 95);
 			this.button2.TabIndex = 44;
@@ -94,7 +94,7 @@
 			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-			this.button3.Location = new System.Drawing.Point(67, 293);
+			this.button3.Location = new System.Drawing.Point(67, 278);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(220, 95);
 			this.button3.TabIndex = 45;
@@ -117,7 +117,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(953, 589);
+			this.ClientSize = new System.Drawing.Size(982, 589);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);

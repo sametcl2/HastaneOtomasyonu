@@ -30,7 +30,7 @@ namespace HastaneOtomasyonuProje
 				e.Handled = true;
 			else
 			{
-				if (textBox1.TextLength > 11 && char.IsControl(e.KeyChar) == false)
+				if (textBox1.TextLength > 10 && char.IsControl(e.KeyChar) == false)
 					e.Handled = true;
 			}
 		}
@@ -70,15 +70,19 @@ namespace HastaneOtomasyonuProje
 			sqlCommand.Parameters.AddWithValue("@personel_no", maskedTextBox1.Text);
 			sqlCommand.Parameters.AddWithValue("@sifre", textBox4.Text);
 			SqlDataReader reader = sqlCommand.ExecuteReader();
-			while (reader.HasRows)
+			if (reader.HasRows)
 			{
-				MessageBox.Show("Giriş Başarılı");
-				DepoAnaEkran depoAnaEkran = new DepoAnaEkran(textBox2.Text, textBox3.Text, textBox1.Text);
-				depoAnaEkran.Show();
-				this.Hide();
-				break;
-
+				while (reader.Read())
+				{
+					MessageBox.Show("Giriş Başarılı");
+					DepoAnaEkran depoAnaEkran = new DepoAnaEkran(textBox2.Text, textBox3.Text, textBox1.Text);
+					depoAnaEkran.Show();
+					this.Hide();
+					break;
+				}
 			}
+			else
+				MessageBox.Show("Kayıt Bulunamadı...");
 			sqlConnection.Close();
 		}
 	}

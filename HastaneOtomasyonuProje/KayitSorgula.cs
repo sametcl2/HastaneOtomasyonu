@@ -43,7 +43,7 @@ namespace HastaneOtomasyonuProje
 				e.Handled = true;
 			else
 			{
-				if (textBox1.TextLength > 11 && char.IsControl(e.KeyChar) == false)
+				if (textBox1.TextLength > 10 && char.IsControl(e.KeyChar) == false)
 					e.Handled = true;
 			}
 		}

@@ -67,11 +67,11 @@
 			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-			this.button1.Location = new System.Drawing.Point(97, 407);
+			this.button1.Location = new System.Drawing.Point(97, 361);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(229, 108);
 			this.button1.TabIndex = 43;
-			this.button1.Text = "Bugünkü randevuları gör";
+			this.button1.Text = "Bugünkü Randevular";
 			this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -81,9 +81,9 @@
 			this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-			this.button2.Location = new System.Drawing.Point(744, 407);
+			this.button2.Location = new System.Drawing.Point(742, 361);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(243, 108);
+			this.button2.Size = new System.Drawing.Size(233, 108);
 			this.button2.TabIndex = 44;
 			this.button2.Text = "İlaç Stokları";
 			this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -95,7 +95,7 @@
 			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-			this.button3.Location = new System.Drawing.Point(414, 232);
+			this.button3.Location = new System.Drawing.Point(414, 181);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(243, 101);
 			this.button3.TabIndex = 45;
@@ -109,11 +109,11 @@
 			this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-			this.button4.Location = new System.Drawing.Point(414, 407);
+			this.button4.Location = new System.Drawing.Point(414, 361);
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(243, 108);
 			this.button4.TabIndex = 46;
-			this.button4.Text = "Parola değiştir";
+			this.button4.Text = "Parola Değiştir";
 			this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.button4.UseVisualStyleBackColor = true;
 			this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -131,7 +131,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1075, 660);
+			this.ClientSize = new System.Drawing.Size(1075, 618);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button4);
 			this.Controls.Add(this.button3);

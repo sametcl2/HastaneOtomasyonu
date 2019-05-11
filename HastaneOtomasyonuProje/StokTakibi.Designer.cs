@@ -71,7 +71,7 @@
             "Çocuk Cerrahisi",
             "Göğüs Hastalıkları",
             "Kalp ve Damar Cerrahisi",
-            "Kulak Burun Boğaz\t",
+            "Kulak Burun Boğaz                                 ",
             "Psikoloji",
             "Ortopedi"});
 			this.comboBox1.Location = new System.Drawing.Point(293, 165);
